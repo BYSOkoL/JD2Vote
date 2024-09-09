@@ -14,11 +14,11 @@ public class VoteResultDTO {
         this.sortedVote = sortedVote;
     }
 
-    public Map<String, Long> getSortedPerformerVotes() {
+    public Map<String, Long> getSortedSingerVotes() {
         return sortedSingerVotes;
     }
 
-    public Map<String, Long> getSortedGenreVotes() {
+    public Map<String, Long> getSortedStyleVotes() {
         return sortedStyleVotes;
     }
 

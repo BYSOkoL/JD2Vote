@@ -38,13 +38,13 @@ public class ResultServlet extends HttpServlet {
             writer.write("<p>" + singer.getKey() + "  " + singer.getValue() + "</p>");
         }
 
-        Map<String, Long> styles = voteResult.getSortedGenreVotes();
+        Map<String, Long> styles = voteResult.getSortedStyleVotes();
         writer.write(BR + HEADER_STYLES_RESULT);
         for (Map.Entry<String, Long> style : styles.entrySet()) {
             writer.write("<p>" + style.getKey() + "  " + style.getValue() + "</p>");
         }
 
-        List<SavedVoteDTO> sortedVotes = voteResult.getSortedVotes();
+        List<SavedVoteDTO> sortedVotes = voteResult.getSortedVoteInfos();
         writer.write(BR + HEADER_MESSAGE);
         for (SavedVoteDTO savedVote : sortedVotes) {
             writer.write("<p>" + savedVote.getCreateDateTime().format(FORMAT) + "  " + savedVote.getVote().getMessage() + "</p>");
